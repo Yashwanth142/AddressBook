@@ -6,8 +6,11 @@
         {
 
             Console.WriteLine("Welcome to Address Book Program");
-             Person person= new Person();
-             person.PersonDetails();
+
+            Console.WriteLine("enter the number of cantacts you want to add: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            AddressBookArray addressBookArray = new AddressBookArray();
+            addressBookArray.addPerson(n);
         }
     }
 }
