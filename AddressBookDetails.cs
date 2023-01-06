@@ -175,11 +175,11 @@ namespace AddressBook
         public void delete()
         {
             Console.WriteLine("-------------Delete Operation-----------");
-            Console.WriteLine("enter the Person name which you want to delete :");
-            string cfname = Console.ReadLine();
+            Console.WriteLine("enter the Phone number which you want to delete :");
+            string cphnumber = Console.ReadLine();
             foreach (var p in Program.Personlist)
             {
-                if (p.fname == cfname)
+                if (p.phnumber == cphnumber)
                 {
                     Program.Personlist.Remove(p);
                     break;
