@@ -9,7 +9,7 @@ namespace AddressBook
     public class AddressBookDetails
     {public void addPerson()
         {
-            
+            Console.WriteLine("-------------Adding Operation-----------");
             Console.WriteLine("How many contacts u want to add: ");
             int n=Convert.ToInt32(Console.ReadLine());
             while(n>0)
@@ -171,6 +171,20 @@ namespace AddressBook
             }
 
         }
+        public void delete()
+        {
+            Console.WriteLine("-------------Delete Operation-----------");
+            Console.WriteLine("enter the Person name which you want to delete :");
+            string cfname = Console.ReadLine();
+            foreach (var p in Program.Personlist)
+            {
+                if (p.fname == cfname)
+                {
+                    Program.Personlist.Remove(p);
+                    break;
 
-    }
+                }
+            }
+
+        }
 }
