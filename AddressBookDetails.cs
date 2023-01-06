@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace AddressBook
 {
     public class AddressBookDetails
-    {public void addPerson()
+    {
+        public void addPerson()
         {
             Console.WriteLine("-------------Adding Operation-----------");
             Console.WriteLine("How many contacts u want to add: ");
-            int n=Convert.ToInt32(Console.ReadLine());
-            while(n>0)
+            int n = Convert.ToInt32(Console.ReadLine());
+            while (n > 0)
             {
                 Person person = new Person();
                 Console.WriteLine("Enter the first name of Person: ");
@@ -187,4 +188,5 @@ namespace AddressBook
             }
 
         }
+    }
 }
