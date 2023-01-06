@@ -14,6 +14,8 @@
             operations.edit();
             Console.WriteLine("After the Edit");
             operations.display();
+            operations.delete();
+            
         }
     }
 }
