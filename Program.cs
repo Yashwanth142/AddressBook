@@ -3,6 +3,7 @@
     class Program
     {
         public static List<Person> Personlist = new List<Person>();
+
         public static void Main(string[] args)
         {
 
@@ -19,12 +20,12 @@
 
                 String stringNumber = y.ToString();
                 book[i] = "AddressBook" + " " + stringNumber;
-                Console.WriteLine("The Address book unique name is: "+ book[i]);
+                Console.WriteLine("The Address book unique name is: " + book[i]);
 
                 while (z > 0)
                 {
                     Console.WriteLine("Enter a number to do which operation: ");
-                    Console.WriteLine("1)Add_Contact\t2)Display_Contacts\t3)Edit_Contact\t4)Delete_Contact\t5)Exit ");
+                    Console.WriteLine("1)Add_Contact\t2)Display_Contacts\t3)Edit_Contact\t4)Delete_Contact\t5)Exit\t6)Search ");
                     int r = Convert.ToInt32(Console.ReadLine());
 
 
@@ -46,6 +47,9 @@
                             break;
                         case 5:
                             z = 0;
+                            break;
+                        case 6:
+                            operations.search();
                             break;
                         default:
                             Console.WriteLine("Enter a valid number to do which operation:");
