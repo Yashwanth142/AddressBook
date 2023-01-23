@@ -8,6 +8,7 @@ namespace AddressBook
 {
     public class AddressBookDetails
     {
+        public static List<Person> Personlist = new List<Person>();
         public void addPerson()
         {
             Console.WriteLine("-------------Adding Operation-----------");
@@ -16,8 +17,27 @@ namespace AddressBook
             while (n > 0)
             {
                 Person person = new Person();
-                Console.WriteLine("Enter the first name of Person: ");
-                person.fname = Console.ReadLine();
+
+                try
+                {
+                    Console.WriteLine("Enter the first name of Person: ");
+
+                    person.fname = Console.ReadLine();
+
+                    if (person.fname.Equals(string.Empty))
+                        throw new NullException("First name can not be empty.");
+                }
+                catch (NullReferenceException)
+                {
+                    throw new NullException("First name can not be null.");
+                }
+
+
+                bool duplicate = Personlist.Exists(e => e.fname == person.fname);
+
+                if (duplicate)
+                    throw new ArgumentNullException("Another person by the same name exists in the Address Book");
+
 
                 Console.WriteLine("Enter the last name of Person: ");
                 person.lname = Console.ReadLine();
