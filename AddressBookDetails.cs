@@ -66,6 +66,29 @@ namespace AddressBook
             }
             Console.WriteLine("\n");
         }
+
+        public void search()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Enter city");
+            string cityname = Console.ReadLine();
+            foreach (var p in Personlist.FindAll(e => e.city == cityname))
+            {
+
+                Console.WriteLine("the person_name in current state is : " + p.fname);
+            }
+            Console.WriteLine();
+            Console.WriteLine("enter state");
+            string statename = Console.ReadLine();
+
+
+            foreach (var p in Personlist.FindAll(e => e.state == statename))
+            {
+                Console.WriteLine("the person_name in current state is : " + p.fname);
+            }
+            Console.WriteLine();
+        }
+
         public void display()
         {
             Console.WriteLine("-------------Display-----------");
