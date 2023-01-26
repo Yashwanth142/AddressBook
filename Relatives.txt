@@ -1,0 +1,16 @@
+The details for Vishnu are:
+Address: Apartment
+City: Hyderbad
+State: Telegana
+Zip Code: 5000101
+Phone Number: 948937235
+Email: Vishnuthere@gmail.com
+
+
+The details for Random Person are:
+Address: Home
+City: City Name
+State: State Name
+Zip Code: 12345
+Phone Number: 1234657890
+Email: email@address.com
