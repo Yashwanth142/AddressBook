@@ -374,7 +374,7 @@ namespace AddressBook
                         Console.WriteLine("Invalid Entry");
                         break;
                 }
-            } while (Control != 0); 
+           } while (Control != 0); 
         }
     }
 }
