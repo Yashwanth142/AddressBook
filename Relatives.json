@@ -1,0 +1,33 @@
+{
+	"Contacts": [{
+			"name": "Yashwanth",
+			"lname": "Vishnu",
+			"address": "sttp",
+			"city": "Hyderbad",
+			"state": "TN",
+			"zipCode": "201001",
+			"Phone": "76698879031",
+			"email": "shyamjaiswal@gmail.com"
+		},
+		{
+			"name": "Pavan",
+			"lname": "kumar",
+			"address": "malva",
+			"city": "vizag",
+			"state": "AP",
+			"zipCode": "201241",
+			"Phone": "9645887599",
+			"email": "praveen@gmail.com"
+		},
+		{
+			"name": "Vinay",
+			"lname": "Readdy",
+			"address": "palko",
+			"city": "trichy",
+			"state": "MP",
+			"zipCode": "201881",
+			"Phone": "9669117500",
+			"email": "NANINA@gmail.com"
+		}
+	]
+}
