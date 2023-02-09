@@ -1,0 +1,16 @@
+The details for Pavan Kummar  are:
+Address: Apartment
+City: Hyderbad
+State: Telegana
+Zip Code: 501001
+Phone Number: 9776548310
+Email: pavan973@gmail.com
+
+
+The details for Random Person are:
+Address: Home
+City: City Name
+State: State Name
+Zip Code: 123456
+Phone Number: 1234657890
+Email: email@address.com
