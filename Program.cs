@@ -25,6 +25,7 @@ namespace Adv_AddressBook
                 Console.WriteLine("3 to Update details of a contact that already exists");
                 Console.WriteLine("4 to Delete a contact");
                 Console.WriteLine("5 to Get contacts by city or state");
+                Console.WriteLine("6 to Get contacts by CERTAIN PERIOD");
                 Console.WriteLine("0 to EXIT");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -54,6 +55,8 @@ namespace Adv_AddressBook
                             program.DisplayDetails(contact);
                         }
                         break;
+                        case 6:
+                        program.DisplayAllDetails_Period();
                     default:
                         break;
                 }
@@ -117,6 +120,24 @@ namespace Adv_AddressBook
         public void DisplayAllDetails()
         {
             SPstr = "dbo.DisplayAllDetails";
+            SqlCommand cmd = new SqlCommand(SPstr, connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Contacts contact = new Contacts();
+                    WriteToContactsClass(contact, reader);
+                    DisplayDetails(contact);
+                }
+            }
+            reader.Close();
+
+        }
+         public void DisplayAllDetails_Period()
+        {
+            SPstr = "dbo.DisplayParticularPeriod_data";
             SqlCommand cmd = new SqlCommand(SPstr, connection);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader reader = cmd.ExecuteReader();
